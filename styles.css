@@ -1,0 +1,130 @@
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* main styles */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.397);
+    background-color: #d0c5c5;
+    background-image: linear-gradient(49deg, #d0c5c5 0%, #DDD6F3 100%);
+    padding-bottom: 1rem;
+}
+.container{
+    text-align: left;
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: #fafafa;
+    -webkit-box-shadow: -11px 9px 63px 0px rgba(0,0,0,0.31);
+    -moz-box-shadow: -11px 9px 63px 0px rgba(0,0,0,0.31);
+    box-shadow: -11px 9px 63px 0px rgba(0,0,0,0.31);
+    padding: 0 3.5rem 2rem 3.5rem;
+}
+h1.top{
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.1rem;
+    margin: .7rem -3.5rem;
+    
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 80%, rgba(252,176,69,1) 100%);
+    padding: 1.5rem;
+    color: #fff;
+}
+h1{
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin: 1.5rem auto;
+    color: purple;
+}
+.img-container{
+    margin: 0 auto 1rem;
+    height: 18rem;
+    width: 18rem;
+
+    -webkit-box-shadow: -7px 4px 15px 2px rgba(214,164,214,1);
+    -moz-box-shadow: -7px 4px 15px 2px rgba(214,164,214,1);
+    box-shadow: -7px 4px 15px 2px rgba(214,164,214,1);
+
+    -webkit-box-shadow: 0px -7px 17px 6px rgba(214,164,214,0.46);
+    -moz-box-shadow: 0px -7px 17px 6px rgba(214,164,214,0.46);
+    box-shadow: 0px -7px 17px 6px rgba(214,164,214,0.46);
+}
+.img-container img{
+    width: 100%;
+    height: auto;
+}
+.container p{
+    text-align: left;
+    margin: 1rem 0;
+    line-height: 1.3;
+}
+pre code{
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+    border-radius: 5px;
+    color: purple;
+
+    -webkit-box-shadow: -7px 4px 15px 2px rgba(171,166,171,0.39);
+    -moz-box-shadow: -7px 4px 15px 2px rgba(171,166,171,0.39);
+    box-shadow: -7px 4px 15px 2px rgba(171,166,171,0.39);
+}
+span.code{
+    background-color: rgb(216, 211, 211);
+    color: purple;
+    padding: 1px 5px;
+    border-radius: 3px;
+    border: 1px solid rgba(51,51,51,.1);    
+}
+p strong{
+    font-weight: 700;
+}

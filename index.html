@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>How to Safely Delete NodeJS Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- This article can be repurposed into one on npm prune as the most powerful essential node command all developers should know, which could be part of an ongoing series of commands all developers should know ["Life Saving Commands Developers Should Know"]. -->
+        
+        <div class="container">
+            <h1 class="top">How to Safely Delete NodeJS Project or Dependencies</h1>
+
+            <div class="img-container">
+                <img src="https://media.giphy.com/media/5zh1j8sUfLUJGI5T5d/giphy.gif" alt="memory eraser from Men In Black movie">
+            </div>
+    
+            <p>Web Development with the Node ecosystem can be an engaging process that allows us to experiment with new tools at a moment's notice. However, the best experimentation is done so with an understanding of safety precautions and the ability to reset things if something goes wrong.</p>
+
+            <p>The Node development process starts by typing the <span class="code">npm install</span> command into the command-line interface. This instruction triggers a series of actions where all of the "dependencies" and "devDependencies" listed in the package.json file are retrieved then installed seamlessly in a layered folder structure that can be difficult to undo if you attempt to delete the items manually. Windows users sometimes get an error that says "source path too long" when trying to remove certain items because the Windows operating system is typically limited to file path locations up to 260 characters long.</p>
+            
+            <p>This tutorial will show you how to uninstall/delete an entire Node Project or singular dependency with three quick steps.</p>
+
+            <h1>Step 1 - Edit the package.json file</h1>
+
+            <p>Locate the package.json file in the root of the project folder. Eliminate all the dependencies and/or devDependencies you wish to get rid of. Remove them all if you wish to delete the entire project. Save the file.</p>
+
+            <pre>
+                <code>
+                    {
+                        "name": "cool-project",
+                        "version": "1.0.0",
+                        "description": "awesome modern cool project",
+                        "main": "index.js",
+                        "scripts": {},
+                        "author": "Harry Belafonte",
+                        "license": "ISC",
+                        "devDependencies": {},
+                        "dependencies": {}
+                    }
+                </code>
+            </pre>
+
+            <h1>Step 2 - Use the <span class="code">npm prune</span> command</h1>
+
+            <p>Make sure your command-line tool is currently inside the folder/directory of the project you wish to change.</p>
+
+            <p>Type and enter the <span class="code">npm prune</span> command. Execution of this command without the addition of any specific files or flags will remove all of the packages not included in the package.json file.  This step may take a while depending upon the power of your individual computer.</p>
+
+            <pre>
+                <code>
+                    change directory into the project folder
+
+                    cd project-path/my-cool-project
+
+                    .... 
+
+                    npm prune
+                </code>
+            </pre>
+
+            <h1>Step 3 - Delete the Project</h1>
+
+            <p><strong>IMPORTANT:</strong> If you only wish to remove/uninstall one or more dependencies you can stop at the previous step. Continue if you wish to remove the entire project from your computer.</p>
+
+            <p>The <span class="code">npm prune</span> command has now successfully stripped unwanted projects from the node module folder. You may now delete the folder from your computer as you would do to any other file/folder normally.</p>
+
+            <p>The <span class="code">npm prune</span>  command is one of the most powerful Node commands for developers because it offers the opportunity to start things over with a clean slate and avoid the bloat of having useless files saved on your computer.</p>
+
+        </div>
+        
+
+        <script src="" async defer></script>
+    </body>
+</html>
